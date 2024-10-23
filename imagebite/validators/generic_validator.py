@@ -56,6 +56,6 @@ class GenericValidator(AbstractValidator):
             self.__prompt = instance.instance
             response: PromptResponse
             for response in instance.responses:
-                evaluations = self._validate_response(response.response)
+                evaluations = self._validate_response(response)
                 for evaluation in evaluations:
                     response.add_generic_validation(GenericValidation.from_dict(evaluation))
