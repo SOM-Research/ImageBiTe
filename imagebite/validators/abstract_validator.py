@@ -16,7 +16,7 @@ class AbstractValidator:
 
     def __init__(self, openai_api_key, **ignore):
         self.__api_client = OpenAI(api_key=openai_api_key)
-        self.__model = 'gpt-4o'
+        self.__model = 'gpt-4o-mini'
     
     def validate_responses(self, prompt, **kwargs):
         pass

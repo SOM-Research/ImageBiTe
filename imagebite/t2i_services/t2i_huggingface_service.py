@@ -45,8 +45,11 @@ class HuggingFaceT2IService(HuggingFaceService):
         payload = {'inputs': prompt}
         response = requests.post(self._api_url, headers=self._headers, json=payload)
         #image = Image.open(io.BytesIO(response.content))
-        image = response.content
-        # add the image as bytes to the prompt response;
-        # it will be managed / processed accordingly by the validator and the IO manager
-        result = PromptResponse(response_type=ResponseType.image, response_image=image)
-        return result
+        if (response.status_code == 200):
+            image = response.content
+            # add the image as bytes to the prompt response;
+            # it will be managed / processed accordingly by the validator and the IO manager
+            result = PromptResponse(response_type=ResponseType.image, response_image=image)
+            return result
+        else:
+            return None

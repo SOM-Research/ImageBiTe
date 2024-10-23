@@ -1,4 +1,5 @@
 #from itertools import permutations
+import time
 import re
 from imagebite.t2i_services.t2i_service import T2IService
 from imagebite.model.prompt_instance import PromptInstance
@@ -76,9 +77,12 @@ class Prompt:
             i = num_samples
             while i >= 1:
                 response = t2iservice.execute_prompt(prompt_instance.instance)
-                response.model = model
-                prompt_instance.add_response(response)
-                i -= 1
+                if (response is not None):
+                    response.model = model
+                    prompt_instance.add_response(response)
+                    i -= 1
+                else:
+                    time.sleep(1)
 
 
     # -----------------------------------------------------------------------
