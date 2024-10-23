@@ -1,0 +1,3 @@
+include langbite4i/resources/prompts_en_us.csv
+include langbite4i/resources/factories.json
+include langbite4i/resources/generic_validators.json

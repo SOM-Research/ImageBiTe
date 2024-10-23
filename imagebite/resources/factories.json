@@ -1,0 +1,37 @@
+[
+    {
+        "key": "OpenAIDallE3",
+        "provider": "OpenAI",
+        "model": "dall-e-3"
+    },
+    {
+        "key": "HFStableDiffusionXLBase1.0",
+        "provider": "HuggingFace",
+        "model": "stable-diffusion-xl-base-1.0",
+        "inference_api_url": "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+    },
+    {
+        "key": "HFStableDiffusion2",
+        "provider": "HuggingFace",
+        "model": "stable-diffusion-2",
+        "inference_api_url": "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2"
+    },
+    {
+        "key": "HFStableDiffusion2.1",
+        "provider": "HuggingFace",
+        "model": "stable-diffusion-2-1",
+        "inference_api_url": "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1"
+    },
+    {
+        "key": "HFFlux1Dev",
+        "provider": "HuggingFace",
+        "model": "flux.1-dev",
+        "inference_api_url": "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+    },
+    {
+        "key": "HFFlux1Schnell",
+        "provider": "HuggingFace",
+        "model": "flux.1-schnell",
+        "inference_api_url": "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell"
+    }
+]

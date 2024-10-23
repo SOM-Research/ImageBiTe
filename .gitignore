@@ -1,0 +1,28 @@
+# environments
+.env
+.env.*
+!.env.example
+.venv
+.venv.*
+!.venv.example
+
+.vscode
+.vscode.*
+.vscode/*
+
+.DS_Store
+
+# inputs and outputs files and folders
+inputs
+outputs
+reports
+image*.jpg
+
+# others
+main.py
+
+# byte-compiled / optimized / DLL files
+__pycache__
+
+# playground files
+__playground
