@@ -12,6 +12,9 @@
 
 .DS_Store
 
+# master datasets
+datasets
+
 # inputs and outputs files and folders
 inputs
 outputs

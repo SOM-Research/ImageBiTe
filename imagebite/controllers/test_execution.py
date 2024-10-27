@@ -23,7 +23,7 @@ class TestExecution:
         num_instances = sum(len(p.instances) for p in self.__prompts)
         print(f'{num_instances} instances.')
         for i, prompt in enumerate(self.__prompts):
-            print(f'running prompt {i}')
+            print(f'running prompt {i+1}')
             n_attempts = self.__scenario.num_retries
             while n_attempts > 0:
                 try:

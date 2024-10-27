@@ -7,4 +7,5 @@ def normalize_and_case_string(input: str, to_lower: bool = True, to_upper: bool 
     return result
 
 def clean_string(input: str):
+    input = input.replace('```', '')
     return re.sub('\n',' ',input.strip()).lower()

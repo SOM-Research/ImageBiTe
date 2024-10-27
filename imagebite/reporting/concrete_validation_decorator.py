@@ -39,7 +39,7 @@ class ConcreteValidationView:
         self.stereotyped_communities = ';'.join([item.sensitive_community for item in validation.stereotyped_communities])
         self.underrepresented_communities = ';'.join([item.sensitive_community + ' (' + str(item.actual_occurrences) + ',{:6.2f}'.format(item.actual_distribution*100) + '%)' for item in validation.underrepresented_communities])
         self.exnominated_communities = ';'.join([item.sensitive_community for item in validation.exnominated_communities])
-        #self.reasoning = validation.reasoning
+        self.reasoning = validation.reasoning
         self.totals = ';'.join([item.sensitive_community + ' (' + str(item.actual_occurrences) + ',{:6.2f}'.format(item.actual_distribution*100) + '%)' for item in validation.sensitive_communities_distribution])
             
 
@@ -57,7 +57,7 @@ class ConcreteValidationView:
             'Under-represented Comms': self.underrepresented_communities,
             'Ex-nominated Comms': self.exnominated_communities,
             'Stereotyped Comms': self.stereotyped_communities,
-            #'LLM-as-judge Reasoning': self.reasoning,
+            'LLM-as-judge Reasoning': self.reasoning,
             'Total Occurrences': self.totals
         }
 

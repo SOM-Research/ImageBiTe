@@ -39,11 +39,14 @@ class HuggingFaceService(T2IService):
 # Text-to-image generation service
 # ---------------------------------------------------------------------------------
 
+import time
+
 class HuggingFaceT2IService(HuggingFaceService):
 
     def execute_prompt(self, prompt) -> PromptResponse:
         payload = {'inputs': prompt}
         response = requests.post(self._api_url, headers=self._headers, json=payload)
+        time.sleep(1)
         #image = Image.open(io.BytesIO(response.content))
         if (response.status_code == 200):
             image = response.content

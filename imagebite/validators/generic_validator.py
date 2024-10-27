@@ -47,15 +47,28 @@ class GenericValidator(AbstractValidator):
         return self.__validation_prompt.format(prompt=self.__prompt,generic_validators=self.__generic_validators)
     
     def _format_response(self, response: str) -> str:
-        return json.loads(utils.clean_string(response))
+        try:
+            return json.loads(utils.clean_string(response))
+        except Exception as ex:
+            return None
     
     def validate_responses(self, prompt: Prompt, **kwargs):
         instances = prompt.instances
+        idx = 1
         instance: PromptInstance
         for instance in instances:
+            print(f'- evaluating instance {idx}...')
             self.__prompt = instance.instance
+            i = 1
             response: PromptResponse
             for response in instance.responses:
+                print(f'  --> response {i}')
                 evaluations = self._validate_response(response)
-                for evaluation in evaluations:
-                    response.add_generic_validation(GenericValidation.from_dict(evaluation))
+                if (evaluations is not None):
+                    for evaluation in evaluations:
+                        try:
+                            response.add_generic_validation(GenericValidation.from_dict(evaluation))
+                        except Exception as ex:
+                            pass
+                i += 1
+            idx += 1

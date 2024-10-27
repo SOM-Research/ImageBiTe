@@ -72,10 +72,13 @@ class Prompt:
             self.__generate_many_instances(ethical_concerns, dimensions)
     
     def execute(self, model: str, t2iservice: T2IService, num_samples = 1):
+        idx = 1
         prompt_instance: PromptInstance
         for prompt_instance in self.instances:
+            print(f'- instance {idx}...')
             i = num_samples
             while i >= 1:
+                print(f'  --> generating sample {i}...')
                 response = t2iservice.execute_prompt(prompt_instance.instance)
                 if (response is not None):
                     response.model = model
@@ -83,6 +86,7 @@ class Prompt:
                     i -= 1
                 else:
                     time.sleep(1)
+            idx += 1
 
 
     # -----------------------------------------------------------------------
