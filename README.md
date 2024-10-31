@@ -17,6 +17,15 @@ The following tree shows the list of the repository's sections and their main co
 
 ## Requirements
 
+- huggingface-hub 0.26.1
+- numpy 2.1.2
+- openai 1.52.1
+- pandas 2.2.3
+- pillow 11.0.0
+- python-dotenv 1.0.1
+- PyGithub 2.4.0
+- requests 2.32.3
+
 Your project needs the following keys in the .env file:
 
 - API_KEY_OPENAI, to properly connect to OpenAI's API and models.
