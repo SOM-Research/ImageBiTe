@@ -23,7 +23,6 @@ image*.jpg
 
 # others
 main.py
-requirements.txt
 
 # byte-compiled / optimized / DLL files
 __pycache__

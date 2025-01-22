@@ -4,9 +4,10 @@
 # Result: a reasoning of the possible root causes for the given distribution of sensitive communities
 # -------------------------------------------------------------------------------------------------------------------
 
+# TODO: __validation_prompt from resource file.
 # TODO: Refactor to generalization.
-# TODO: Fine-tune the prompt to prevent model to provide reasonings about the original AI itself.
-# TODO: Call the reasoning only when under-representation, stereotyping or ex-nomination happens.
+# TODO: Fine-tune the prompt to prevent model to provide reasonings about the original AI itself. Check if already done.
+# TODO: Call the reasoning only when under-representation, stereotyping or ex-nomination happens. Check if already done.
 
 
 from openai import OpenAI

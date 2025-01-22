@@ -7,6 +7,8 @@
 # Result: lists of under-represented, ex-nominated and stereotyped communities
 # -------------------------------------------------------------------------------------------------------------------
 
+# TODO: __validation_prompt from resource file
+
 import copy
 from imagebite import utils
 from imagebite.model.prompt import Prompt

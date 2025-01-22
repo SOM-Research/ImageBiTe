@@ -4,6 +4,8 @@
 # Result: a list of qualitative evaluations based on generic conditions addessing different discrimination types
 # -------------------------------------------------------------------------------------------------------------------
 
+# TODO: __validation_prompt from resource file
+
 import json
 from imagebite import utils
 from imagebite.model.prompt import Prompt

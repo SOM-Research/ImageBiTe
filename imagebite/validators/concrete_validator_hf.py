@@ -1,3 +1,7 @@
+# TODO: __validation_prompt from resource file
+# TODO: parametrize the client
+# TODO: generalize and then implement subclass for zero-shot image classification models (eg: https://huggingface.co/openai/clip-vit-base-patch32)
+
 import copy
 from huggingface_hub import InferenceClient
 
