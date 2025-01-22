@@ -46,7 +46,7 @@ This project is part of a research line of the [SOM Research Lab](https://som-re
 
 Related publications:
 
-> Sergio Morales, Robert Clarisó and Jordi Cabot. "ImageBiTe: A Framework for Evaluating Representational Harms in Text-to-Image Models," 4th International Conference on AI Engineering – Software Engineering for AI (CAIN '25), April 27-28, 2024, Ottawa, Canada (to be published)
+> Sergio Morales, Robert Clarisó and Jordi Cabot. "ImageBiTe: A Framework for Evaluating Representational Harms in Text-to-Image Models," 4th International Conference on AI Engineering – Software Engineering for AI (CAIN '25), April 27-28, 2025, Ottawa, Canada (to be published)
 
 ## License
 
