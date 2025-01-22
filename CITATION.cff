@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Morales
+    given-names: Sergio
+    orcid: https://orcid.org/0000-0002-5921-9440
+title: "ImageBiTe: A Framework for Evaluating Representational Harms in Text-to-Image Models"
+version: 1.0.0
+license: MIT
+date-released: 2024-10-27
