@@ -5,6 +5,11 @@
         "model": "dall-e-3"
     },
     {
+        "key": "OpenAIDallE2",
+        "provider": "OpenAI",
+        "model": "dall-e-2"
+    },
+    {
         "key": "HFStableDiffusionXLBase1.0",
         "provider": "HuggingFace",
         "model": "stable-diffusion-xl-base-1.0",

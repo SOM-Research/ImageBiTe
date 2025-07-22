@@ -16,7 +16,7 @@ class AbstractValidator:
 
     def __init__(self, openai_api_key, **ignore):
         self.__api_client = OpenAI(api_key=openai_api_key)
-        self.__model = 'gpt-4o-mini'
+        self.__model = 'gpt-4o'
     
     def validate_responses(self, prompt, **kwargs):
         pass
@@ -34,7 +34,7 @@ class AbstractValidator:
         return validation
     
     def __query_validation(self, message_payload):
-        completion = self.__api_client.chat.completions.create(
+        completion =self.__api_client.chat.completions.create(
             model = self.__model,
             # if no max_tokens provided, default seems to be 16
             # TODO: decide!

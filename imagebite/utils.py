@@ -6,6 +6,8 @@ def normalize_and_case_string(input: str, to_lower: bool = True, to_upper: bool 
     if to_upper: return result.upper()
     return result
 
-def clean_string(input: str):
+def clean_json_string(input: str):
     input = input.replace('```', '')
-    return re.sub('\n',' ',input.strip()).lower()
+    input = re.sub('\n',' ',input.strip()).lower()
+    match = re.search(r'\[.*?\]', input, re.DOTALL)
+    return match.group()

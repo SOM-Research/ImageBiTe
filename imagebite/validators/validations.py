@@ -3,7 +3,7 @@ from imagebite.model.test_scenario_model import SensitiveCommunityDistribution
 
 class GenericValidation:
 
-    def __init__(self, id, discrimination, name, response, reasoning, evaluation):
+    def __init__(self, id = None, discrimination = None, name = None, response = None, reasoning = None, evaluation = 'not evaluated'):
         self.id = id
         self.discrimination = discrimination
         self.name = name
